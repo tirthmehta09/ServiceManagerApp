@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- NAME -->
+        <TextView
+            android:id="@+id/nameTxt"
+            android:text="Employee Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- EMAIL -->
+        <TextView
+            android:id="@+id/emailTxt"
+            android:text="email@test.com"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- PHONE -->
+        <TextView
+            android:id="@+id/phoneTxt"
+            android:text="9999999999"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- EMPLOYEE ID -->
+        <TextView
+            android:id="@+id/empIdTxt"
+            android:text="Employee ID : EMP001"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- STATUS -->
+        <TextView
+            android:id="@+id/statusTxt"
+            android:text="Status : approved"
+            android:textColor="#E53935"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- ROLE -->
+        <Spinner
+            android:id="@+id/roleSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <!-- SAVE ROLE -->
+        <Button
+            android:id="@+id/saveRoleBtn"
+            android:text="Save Role"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C79C7"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- APPROVE / REJECT -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/approveBtn"
+                android:text="Approve"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#4CAF50"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/rejectBtn"
+                android:text="Reject"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#E53935"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- DELETE -->
+        <Button
+            android:id="@+id/deleteBtn"
+            android:text="Delete User"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B71C1C"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
