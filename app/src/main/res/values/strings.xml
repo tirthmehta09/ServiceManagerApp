@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Service Manager</string>
+    <string-array name="roles">
+        <item>Staff</item>
+        <item>Admin</item>
+        <item>Operator</item>
+        <item>Owner</item>
+    </string-array>
+    <string-array name="locations">
+        <item>Mumbai</item>
+        <item>Rajkot</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

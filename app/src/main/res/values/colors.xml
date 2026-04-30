@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Status badge colors -->
+    <color name="status_requested">#9E9E9E</color>
+    <color name="status_going">#1976D2</color>
+    <color name="status_inspection">#0288D1</color>
+    <color name="status_repair_progress">#F57C00</color>
+    <color name="status_repair_complete">#FB8C00</color>
+    <color name="status_delivered">#43A047</color>
+    <color name="status_closed">#2E7D32</color>
+    <color name="status_cancelled">#D32F2F</color>
+
+    <!-- Brand colors -->
+    <color name="brand_primary">#1565C0</color>
+    <color name="brand_primary_dark">#0D47A1</color>
+    <color name="brand_accent">#1565C0</color>
+    <color name="focus_blue">#1565C0</color>
+    <color name="surface">#F4F6F8</color>
+    <color name="card_bg">#FFFFFF</color>
+</resources>
