@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "989536094365",
+    "project_id": "madservicemanagerapp",
+    "storage_bucket": "madservicemanagerapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989536094365:android:e7ab22ef6c5d97a1422c74",
+        "android_client_info": {
+          "package_name": "com.example.servicemanagerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYvolRGbVvHI3qHy6rkNUcCeilf0v0A3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
