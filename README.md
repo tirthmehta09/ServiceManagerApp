@@ -39,3 +39,25 @@ The project is currently in active development. Key upcoming features include:
 - **Tirth Mehta** - [tirthmehta09](https://github.com/tirthmehta09)
 - **Krimy Shah** - [krimyyy](https://github.com/krimyyy)
 - **Dhara Patel** - [dharapatel76](https://github.com/dharapatel76)
+
+## Before you build
+
+The app authenticates to its `sendFCM` Cloud Function with a shared secret.
+It is not in this repository and must be supplied in two places, the same
+value in both.
+
+**App** — add to `local.properties` (git ignores that file):
+
+```
+APP_SECRET=<a long random string>
+```
+
+**Function** — set it on the deployment:
+
+```
+firebase functions:config:set app.secret="<the same string>"
+```
+
+Without it the app sends no secret and the function rejects every request,
+which is deliberate: the function fails closed rather than accepting
+everyone when nothing is configured.

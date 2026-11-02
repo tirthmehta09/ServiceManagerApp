@@ -15,6 +15,22 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // The shared secret the app sends to the sendFCM Cloud Function.
+        // It is read from local.properties, which git ignores, so the value
+        // is never committed. Put APP_SECRET=... in local.properties and set
+        // the same value on the function (see functions/README).
+        def secretProps = new Properties()
+        def localProps = rootProject.file("local.properties")
+        if (localProps.exists()) {
+            localProps.withInputStream { secretProps.load(it) }
+        }
+        buildConfigField "String", "APP_SECRET",
+                "\"${secretProps.getProperty('APP_SECRET', '')}\""
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 
     buildTypes {

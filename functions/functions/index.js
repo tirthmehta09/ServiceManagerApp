@@ -2,7 +2,11 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 admin.initializeApp();
 
-const APP_SECRET = "SM_SECRET_2026";
+// The shared secret the app sends in X-FCM-Secret. Set it with
+//     firebase functions:config:set app.secret="<a long random string>"
+// or as the APP_SECRET environment variable. It is never committed.
+const APP_SECRET = process.env.APP_SECRET ||
+    (functions.config().app && functions.config().app.secret);
 
 exports.sendFCM = functions.https.onRequest(async (req, res) => {
     console.log("Headers:", JSON.stringify(req.headers));
@@ -10,8 +14,11 @@ exports.sendFCM = functions.https.onRequest(async (req, res) => {
 
     // 1. Verify Custom Secret Header
     const secret = req.headers["x-fcm-secret"];
-    if (!secret || secret !== APP_SECRET) {
-        console.warn(`Unauthorized: Expected ${APP_SECRET}, got ${secret}`);
+    // Fail closed: with no secret configured the function rejects everything,
+    // rather than accepting every caller. And never log the expected value --
+    // the old line printed it into the function log on each failed attempt.
+    if (!APP_SECRET || !secret || secret !== APP_SECRET) {
+        console.warn("Unauthorized: bad or missing X-FCM-Secret");
         res.status(401).send("Unauthorized");
         return;
     }

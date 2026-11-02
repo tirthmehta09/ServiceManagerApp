@@ -13,7 +13,8 @@ public class FCMHelper {
 
     // The deployed Firebase Cloud Function URL
     private static final String FCM_API = "https://us-central1-madservicemanagerapp.cloudfunctions.net/sendFCM";
-    private static final String APP_SECRET = "SM_SECRET_2026";
+    // Supplied at build time from local.properties -- never hardcoded.
+    private static final String APP_SECRET = BuildConfig.APP_SECRET;
 
     public static void sendNotification(String toTopic, String title, String messageStr, String serviceId) {
         new AsyncTask<Void, Void, Void>() {
