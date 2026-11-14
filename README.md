@@ -1,5 +1,9 @@
 # Service Manager App
 
+![Service Manager App](docs/banner.jpg)
+
+> Portfolio page with screenshots and a walkthrough: https://tirthmehta.vercel.app/projects/service-manager-app/
+
 A robust Android application designed for managing service requests, staff assignments, and reporting. Built with a modern tech stack focused on real-time data and role-based access.
 
 ## 🚀 Features
