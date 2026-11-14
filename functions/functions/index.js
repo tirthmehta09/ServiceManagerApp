@@ -9,7 +9,6 @@ const APP_SECRET = process.env.APP_SECRET ||
     (functions.config().app && functions.config().app.secret);
 
 exports.sendFCM = functions.https.onRequest(async (req, res) => {
-    console.log("Headers:", JSON.stringify(req.headers));
     console.log("Body:", JSON.stringify(req.body));
 
     // 1. Verify Custom Secret Header
